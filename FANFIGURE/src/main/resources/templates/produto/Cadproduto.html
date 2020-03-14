@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Cadastro Produtos</title>
 </head>
 <body>
-	
-	<body background="http://3.bp.blogspot.com/-XDMimvMn0WI/Tz6Liow_LjI/AAAAAAAAATs/d72w3h5yBAk/s1600/eiffel-tower.jpg">
-		
-	<form action="/pagina-processa-dados-do-form" method="post" class="center">
-	
-   <form>
-  <label for="fname"><font color="#FFFFF">Produto:</font></label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname"><font color="#FFFFF">Quantidade:</font></label><br>
-  <input type="text" id="lname" name="lname"><br>
-  <label for="lname"><font color="#FFFFF">Valor:</font></label><br>
-  <input type="text" id="lname" name="lname"><br>
-  <label for="lname"><font color="#FFFFF">Mensagem</font></label><br>
-  <input type="text" id="lname" name="lname"><br>
-  
-</form>
-    
-    </body>
+<body
+	background="http://3.bp.blogspot.com/-XDMimvMn0WI/Tz6Liow_LjI/AAAAAAAAATs/d72w3h5yBAk/s1600/eiffel-tower.jpg">
+
+	<form method="POST" th:object="${produto}"
+		th:action="@{/produto/salvar}">
+
+		<input type="hidden" th:field="*{id}" /> <label for="fname"><font
+			color="#FFFFF">Nome:</font></label><br> <input type="text" id="fname"
+			name="fname" th:field="*{nome}"><br> <label for="lname"><font
+			color="#FFFFF">Material:</font></label><br> <input type="text"
+			id="lname" name="lname" th:field="*{material}"><br>
+		<button type="submit" class="btn btn-primary">Salvar</button>
+	</form>
+
+</body>
 
 
-	
+
 
 </body>
 </html>

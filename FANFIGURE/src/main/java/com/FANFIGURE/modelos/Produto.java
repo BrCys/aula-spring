@@ -1,4 +1,4 @@
-package com.Modelos;
+package com.FANFIGURE.modelos;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

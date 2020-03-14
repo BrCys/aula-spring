@@ -13,7 +13,7 @@ public class HomeController {
 	
 	public ModelAndView inicio() {
 		
-		ModelAndView nv = new ModelAndView("produto/Cadproduto");
+		ModelAndView nv = new ModelAndView("index");
 		
 	return nv;		
 	
